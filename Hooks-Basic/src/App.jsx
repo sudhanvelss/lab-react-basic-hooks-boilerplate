@@ -1,19 +1,17 @@
-import React,{ useState }from "react";
+import React,{useState} from 'react'
 import './App.css'
-import  Toggle  from "./components/Toggle";
-export const ToggleTheme = React.createContext()
+import Context from './Component/Context'
+import Content from './Component/Content'
 
-function App(){
-  // const [state, setState] = useState(true)
-  // const handleToggle = () => {
-  //   setState(state => ! state)
-  // }
+function App() {
 
-  return(
-  //   <ToggleTheme.Provider value={state}>
-  //     <button onClick={handleToggle} style={{textAlign:"center"}}>Toggle</button>
-    <Toggle/>
-  //   </ToggleTheme.Provider>
+  return (
+    <>
+      <Context>
+        <Content/>
+      </Context>
+    </>
   )
 }
+
 export default App
